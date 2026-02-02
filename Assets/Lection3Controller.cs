@@ -6,12 +6,12 @@ using static UnityEditor.Progress;
 
 public class Lection3Controller : MonoBehaviour
 {
-    [SerializeField] private int[] _intArray;
-    [SerializeField] private string x = "Element To Delete";
+    [SerializeField] private List<int> _intList;
+    [Header("Видалення елементу")]
     [SerializeField] private int _WhichElementToDelete;
-    [SerializeField] private string y = "Element To Add";
+    [Header("Додавання елименту")]
     [SerializeField] private int _WhichElementToAdd;
-    [SerializeField] private int _WhereElementToAdd;
+
 
     [ContextMenu("PrintArray")]
     void PrintArray()
@@ -19,9 +19,9 @@ public class Lection3Controller : MonoBehaviour
 
         string str = "list: ";
 
-        for (int i = 0; i < _intArray.Length; i++)
+        for (int i = 0; i < _intList.Count; i++)
         {
-            str += $" ,{_intArray[i]}";
+            str += $" ,{_intList[i]}";
         }
         str += " .";
         Debug.Log(str);
@@ -29,53 +29,42 @@ public class Lection3Controller : MonoBehaviour
     [ContextMenu("AddElement")]
     void AddElement()
     {
-        if (_WhereElementToAdd <= _intArray.Length && _WhereElementToAdd > -1)
-        {
-            _intArray[_WhereElementToAdd] = _WhichElementToAdd;
-        }
-        else
-        {
-            Debug.Log("Incorrect _WhereElementToAdd");
-        }
+
+        _intList.Add(_WhichElementToAdd);
+
     }
 
     [ContextMenu("DelElement")]
     void DelElement()
     {
-        for (int i = 0; i < _intArray.Length; i++)
-        {
-            if (_intArray[i] == _WhichElementToDelete)
-            {
-                _intArray[i] = 0;
-            }
-        }
+        _intList.Remove(_WhichElementToDelete);
     }
 
-    [ContextMenu("DelArray")]
-    void DelArray()
+    [ContextMenu("DelList")]
+    void DelList()
     {
-        for (int i = 0; i < _intArray.Length; i++)
+        for (int i = 0; i < _intList.Count; i++)
         {
-            _intArray[i] = 0;
+            _intList.Clear();
         }
     }
 
 
-    [ContextMenu("SortArray")]
-    void SortArray()//сортування бульбашка
+    [ContextMenu("SortList")]
+    void SortList()//сортування бульбашка
     {
-        for (int i = 0; i < _intArray.Length - 1; i++)
+        for (int i = 0; i < _intList.Count - 1; i++)
         {
-            for (int j = 0; j < _intArray.Length - i - 1; j++)
+            for (int j = 0; j < _intList.Count - i - 1; j++)
             {
-                if (_intArray[j] > _intArray[j + 1])
+                if (_intList[j] > _intList[j + 1])
                 {
 
-                    int temp = _intArray[j];
+                    int temp = _intList[j];
 
-                    _intArray[j] = _intArray[j + 1];
+                    _intList[j] = _intList[j + 1];
 
-                    _intArray[j + 1] = temp;
+                    _intList[j + 1] = temp;
 
                 }
             }

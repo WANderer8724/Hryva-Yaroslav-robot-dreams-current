@@ -154,12 +154,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f023ffb2e6b702c4680a77b5ada401bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _intArray: 0000000004000000050000000600000022000000
-  x: Element To Delete
+  _intList: 0100000005000000070000000900000003000000
   _WhichElementToDelete: 3
-  y: Element To Add
   _WhichElementToAdd: 4
-  _WhereElementToAdd: 2
 --- !u!65 &451362827
 BoxCollider:
   m_ObjectHideFlags: 0
