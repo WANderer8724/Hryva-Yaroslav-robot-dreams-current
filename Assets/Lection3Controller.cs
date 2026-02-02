@@ -7,9 +7,9 @@ using static UnityEditor.Progress;
 public class Lection3Controller : MonoBehaviour
 {
     [SerializeField] private List<int> _intList;
-    [Header("Видалення елементу")]
+    [Header("Delete element")]
     [SerializeField] private int _WhichElementToDelete;
-    [Header("Додавання елименту")]
+    [Header("Add element")]
     [SerializeField] private int _WhichElementToAdd;
 
 
