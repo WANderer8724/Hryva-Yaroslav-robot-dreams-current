@@ -390,6 +390,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 429f5d64c8b1675459e3709ef4b141d4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 429f5d64c8b1675459e3709ef4b141d4, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -463,6 +467,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_4
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 043111edfa1d129478e041d0c2a324c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 043111edfa1d129478e041d0c2a324c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.067692
@@ -530,6 +538,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_5 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1e2ef0cc5c65717479848f40d793d3ee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e2ef0cc5c65717479848f40d793d3ee, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.60738
@@ -596,6 +608,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 043111edfa1d129478e041d0c2a324c8, type: 3}
       propertyPath: m_Name
       value: Stone_4 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 043111edfa1d129478e041d0c2a324c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 043111edfa1d129478e041d0c2a324c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -732,6 +748,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Baker_house
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 06f242e6d0ae1dd4abc5e5ff41c613c1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 06f242e6d0ae1dd4abc5e5ff41c613c1, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -783,6 +803,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 06f242e6d0ae1dd4abc5e5ff41c613c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 06f242e6d0ae1dd4abc5e5ff41c613c1, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 06f242e6d0ae1dd4abc5e5ff41c613c1, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -873,6 +897,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8988c881874f4cb4db33f58b6a8e7416, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8988c881874f4cb4db33f58b6a8e7416, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.163866
@@ -940,6 +968,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_5
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1e2ef0cc5c65717479848f40d793d3ee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e2ef0cc5c65717479848f40d793d3ee, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.6407089
@@ -1006,6 +1038,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 043111edfa1d129478e041d0c2a324c8, type: 3}
       propertyPath: m_Name
       value: Stone_4 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 043111edfa1d129478e041d0c2a324c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 043111edfa1d129478e041d0c2a324c8, type: 3}
       propertyPath: m_LocalScale.x
@@ -1085,6 +1121,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 429f5d64c8b1675459e3709ef4b141d4, type: 3}
       propertyPath: m_Name
       value: Barrel
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 429f5d64c8b1675459e3709ef4b141d4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 429f5d64c8b1675459e3709ef4b141d4, type: 3}
       propertyPath: m_LocalScale.x
@@ -1199,6 +1239,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 8988c881874f4cb4db33f58b6a8e7416, type: 3}
       propertyPath: m_Name
       value: Stone_2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8988c881874f4cb4db33f58b6a8e7416, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8988c881874f4cb4db33f58b6a8e7416, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1462,7 +1506,7 @@ Terrain:
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
   m_ReceiveGI: 1
-  m_ScaleInLightmap: 0.0256
+  m_ScaleInLightmap: 1
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
   m_GroupingID: 0
   m_RenderingLayerMask: 1
@@ -1496,6 +1540,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 1e2ef0cc5c65717479848f40d793d3ee, type: 3}
       propertyPath: m_Name
       value: Stone_5 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1e2ef0cc5c65717479848f40d793d3ee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e2ef0cc5c65717479848f40d793d3ee, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1564,6 +1612,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0a1cade8f3785a5498483caf954be128, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0a1cade8f3785a5498483caf954be128, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.7991905
@@ -1631,6 +1683,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_2
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8988c881874f4cb4db33f58b6a8e7416, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8988c881874f4cb4db33f58b6a8e7416, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.0156784
@@ -1669,6 +1725,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8988c881874f4cb4db33f58b6a8e7416, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 8988c881874f4cb4db33f58b6a8e7416, type: 3}
+      propertyPath: m_StaticShadowCaster
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 8988c881874f4cb4db33f58b6a8e7416, type: 3}
