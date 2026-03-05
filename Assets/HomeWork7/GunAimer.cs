@@ -25,15 +25,7 @@ public class GunAimer : MonoBehaviour
         Shoot.performed -= OnShoot;
         Shoot.Disable();
     }
-    void Update()
-    {
-        Cursor.lockState = CursorLockMode.Locked; 
-        Cursor.visible = false;
-
-        Ray();
-        if (hit) weapon.transform.LookAt(hitInfo.point);
-        else weapon.transform.rotation = this.transform.rotation;
-    }
+    
     void OnShoot(CallbackContext context)
     {
         Ray();
