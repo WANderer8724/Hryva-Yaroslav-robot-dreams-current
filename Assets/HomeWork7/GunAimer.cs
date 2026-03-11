@@ -15,6 +15,8 @@ public class GunAimer : MonoBehaviour
 
     [SerializeField] float damage;
 
+    float score;
+
     bool hit;
     public RaycastHit hitInfo;
     private void OnEnable()
@@ -45,10 +47,11 @@ public class GunAimer : MonoBehaviour
 
         EnemyHP enemy = hitInfo.collider.GetComponent<EnemyHP>();
 
-        if (enemy!=null)
-
-        enemy.takeDamage(damage);
-        ScoreSystem();
+        if (enemy != null)
+        {
+            enemy.takeDamage(damage);
+            ScoreSystem();
+        }
     }
     void WeaponLookToo()
     {
@@ -63,7 +66,9 @@ public class GunAimer : MonoBehaviour
         }
     }
     void ScoreSystem()
-    { 
+    {
+        score += 100;
+        Debug.Log("Your skore is:"+score);
     }
     void ShootAnimation()
     {
