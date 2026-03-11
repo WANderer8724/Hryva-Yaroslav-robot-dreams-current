@@ -13,5 +13,6 @@ public class EnemyHP : MonoBehaviour
     public void takeDamage(float damage)
     {
         CurrentHP -= damage;
+        Debug.Log(CurrentHP);
     }
 }

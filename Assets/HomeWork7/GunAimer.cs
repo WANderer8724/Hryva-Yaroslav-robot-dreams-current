@@ -9,6 +9,8 @@ public class GunAimer : MonoBehaviour
     [SerializeField] private Transform CameraTrnsform;
     [SerializeField] GameObject weapon;
 
+    [SerializeField] GameObject bulletPrefab;
+
     [SerializeField] InputAction Shoot;
 
     [SerializeField] float damage;
@@ -25,7 +27,16 @@ public class GunAimer : MonoBehaviour
         Shoot.performed -= OnShoot;
         Shoot.Disable();
     }
-    
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+    private void Update()
+    {
+        WeaponLookToo();
+    }
     void OnShoot(CallbackContext context)
     {
         Ray();
@@ -37,11 +48,37 @@ public class GunAimer : MonoBehaviour
         if (enemy!=null)
 
         enemy.takeDamage(damage);
+        ScoreSystem();
     }
-
+    void WeaponLookToo()
+    {
+        Ray();
+        if (!hit)
+        {
+            weapon.transform.rotation = Quaternion.LookRotation(CameraTrnsform.forward);
+        }
+        else
+        {
+            weapon.transform.LookAt(hitInfo.point);
+        }
+    }
+    void ScoreSystem()
+    { 
+    }
     void ShootAnimation()
     {
+        GameObject bullet = Instantiate(bulletPrefab, weapon.transform.position, Quaternion.identity);
 
+        Vector3 targetPoint;
+
+        if (hit)
+            targetPoint = hitInfo.point;
+        else
+            targetPoint = CameraTrnsform.position + CameraTrnsform.forward * 100f;
+
+        Vector3 direction = (targetPoint - weapon.transform.position).normalized;
+
+        bullet.GetComponent<Bullet>().SetDirection(direction);
     }
 
     void Ray()
