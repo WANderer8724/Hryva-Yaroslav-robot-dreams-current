@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876e19307af0a034f9cd6151a661bb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 100
 --- !u!96 &7900192507111613994
 TrailRenderer:
   serializedVersion: 3

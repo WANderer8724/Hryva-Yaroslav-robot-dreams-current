@@ -8,6 +8,7 @@ public class GunAimer : MonoBehaviour
 {
     [SerializeField] private Transform CameraTrnsform;
     [SerializeField] GameObject weapon;
+    [SerializeField] GameObject weaponMuzzle;
 
     [SerializeField] GameObject bulletPrefab;
 
@@ -72,7 +73,7 @@ public class GunAimer : MonoBehaviour
     }
     void ShootAnimation()
     {
-        GameObject bullet = Instantiate(bulletPrefab, weapon.transform.position, Quaternion.identity);
+        GameObject bullet = Instantiate(bulletPrefab, weaponMuzzle.transform.position, Quaternion.identity);
 
         Vector3 targetPoint;
 
@@ -81,7 +82,7 @@ public class GunAimer : MonoBehaviour
         else
             targetPoint = CameraTrnsform.position + CameraTrnsform.forward * 100f;
 
-        Vector3 direction = (targetPoint - weapon.transform.position).normalized;
+        Vector3 direction = (targetPoint - weaponMuzzle.transform.position).normalized;
 
         bullet.GetComponent<Bullet>().SetDirection(direction);
     }

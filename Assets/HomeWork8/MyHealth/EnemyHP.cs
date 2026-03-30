@@ -13,6 +13,11 @@ public class EnemyHP : MonoBehaviour
     public void takeDamage(float damage)
     {
         CurrentHP -= damage;
-        Debug.Log(CurrentHP);
+        if (CurrentHP <= 0) IsDeath();
+    }
+
+    void IsDeath()
+    {
+        GetComponent<EnemyBehaviour>().isAlive = false;
     }
 }
