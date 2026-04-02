@@ -5,6 +5,7 @@ public class Bullet : MonoBehaviour
     Vector3 direction;
 
     public float speed = 30f;
+        [SerializeField] float damage = 10f;
 
     void Start()
     {
@@ -22,6 +23,18 @@ public class Bullet : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
+        EnemyHP enemy = other.GetComponent<EnemyHP>();
+        if (enemy != null)
+        {
+            enemy.takeDamage(damage);
+        }
+
+        PlayerHP player = other.GetComponent<PlayerHP>();
+        if (player != null)
+        {
+            player.TakeDamage(damage);
+        }
+
         Destroy(gameObject);
     }
 }

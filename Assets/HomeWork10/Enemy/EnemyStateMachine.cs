@@ -14,6 +14,7 @@ public class EnemyStateMachine : MonoBehaviour
 
     private Renderer rend;
 
+    public Gun gun;
 
     void Start()
     {
@@ -134,20 +135,7 @@ public class EnemyStateMachine : MonoBehaviour
             target.y = stateMachine.transform.position.y;
 
             // направление движения
-            Vector3 direction = target - stateMachine.transform.position;
-            direction.y = 0;
-
-            // поворот
-            if (direction != Vector3.zero)
-            {
-                Quaternion targetRotation = Quaternion.LookRotation(direction);
-
-                stateMachine.transform.rotation = Quaternion.Lerp(
-                    stateMachine.transform.rotation,
-                    targetRotation,
-                    rotationSpeed * Time.deltaTime
-                );
-            }
+            stateMachine.Look(stateMachine);
 
             // движение
             stateMachine.transform.position = Vector3.MoveTowards(
@@ -174,50 +162,101 @@ public class EnemyStateMachine : MonoBehaviour
     }
 
     // ================= DISTANT ATTACK =================
+
     public class DistantAttackState : State
     {
+        float shootCooldown = 1f;
+        float timer;
+
         public DistantAttackState(EnemyStateMachine stateMachine) : base(stateMachine) { }
 
         public override void Enter()
         {
+            timer = 0;
             stateMachine.SetColor(Color.red);
             Debug.Log("DistantAttackState");
         }
 
         public override void Update()
         {
+            if (stateMachine.currentTarget == null) return;
 
-        }
+            timer += Time.deltaTime;
 
-        public override void Exit()
-        {
-            Debug.Log("Exit Attack");
+            stateMachine.Look(stateMachine);
+
+            // Стрельба
+            if (timer >= shootCooldown)
+            {
+                timer = 0;
+
+                stateMachine.gun.Shoot(stateMachine.currentTarget.position);
+            }
         }
     }
+
     // ================= MELE ATTACK =================
     public class MeleAttackState : State
     {
         private float timer;
+
+        private float attackCooldown = 1.2f;
+        private float damage = 100f;
 
         public MeleAttackState(EnemyStateMachine stateMachine) : base(stateMachine) { }
 
         public override void Enter()
         {
             timer = 0;
-            stateMachine.SetColor(Color.red);
+            stateMachine.SetColor(Color.cyan);
             Debug.Log("Melee Attack");
         }
 
         public override void Update()
         {
-            
-        }
-        public override void Exit()
-        {
+            if (stateMachine.currentTarget == null) return;
 
+            stateMachine.Look(stateMachine);
+
+            timer += Time.deltaTime;
+
+            if (timer >= attackCooldown)
+            {
+                timer = 0;
+
+                Attack();
+            }
         }
+
+        void Attack()
+        {
+            PlayerHP player = stateMachine.currentTarget.GetComponent<PlayerHP>();
+
+            if (player != null)
+            {
+                player.TakeDamage(damage);
+                Debug.Log("Enemy hit player!");
+            }
+        }
+
+        public override void Exit() { }
     }
 
+    public void Look(EnemyStateMachine stateMachine)
+    {
+            Vector3 direction = stateMachine.currentTarget.position - stateMachine.transform.position;
+            direction.y = 0;
+
+            if (direction != Vector3.zero)
+            {
+                Quaternion rot = Quaternion.LookRotation(direction);
+                stateMachine.transform.rotation = Quaternion.Lerp(
+                    stateMachine.transform.rotation,
+                    rot,
+                    5f * Time.deltaTime
+                );
+            }
+    }
     public void SetColor(Color color)
     {
         if (rend != null)

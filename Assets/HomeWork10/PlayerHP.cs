@@ -18,6 +18,6 @@ public class PlayerHP : MonoBehaviour
 
     void IsDeath()
     {
-        
+        Debug.Log("Game over");
     }
 }

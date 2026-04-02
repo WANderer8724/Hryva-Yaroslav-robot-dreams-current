@@ -171,6 +171,21 @@ MonoBehaviour:
       m_Action: Action
       m_Flags: 0
     m_Flags: 0
+--- !u!114 &415788142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415788125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cac724fffddc0c54b88748533c996afc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  muzzle: {fileID: 689305989}
+  bulletPrefab: {fileID: 7193784429843569286, guid: 72af4e4ace2126d45a4d950695bdb64b,
+    type: 3}
 --- !u!1 &689305988
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 689305989}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,68 +476,73 @@ PrefabInstance:
     - target: {fileID: 98222058414323710, guid: 96ac94f670030d34c98a7ec94987f306,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 192794530290321237, guid: 96ac94f670030d34c98a7ec94987f306,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1351914939182333852, guid: 96ac94f670030d34c98a7ec94987f306,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2086779769995776976, guid: 96ac94f670030d34c98a7ec94987f306,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2439081814933498102, guid: 96ac94f670030d34c98a7ec94987f306,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2504724298653868437, guid: 96ac94f670030d34c98a7ec94987f306,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3794121275314184397, guid: 96ac94f670030d34c98a7ec94987f306,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3836866701602417155, guid: 96ac94f670030d34c98a7ec94987f306,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4069137059375214959, guid: 96ac94f670030d34c98a7ec94987f306,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4202816852309198060, guid: 96ac94f670030d34c98a7ec94987f306,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4530746894464593393, guid: 96ac94f670030d34c98a7ec94987f306,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4883481674840299395, guid: 96ac94f670030d34c98a7ec94987f306,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5056682892882538871, guid: 96ac94f670030d34c98a7ec94987f306,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5137253222520691502, guid: 96ac94f670030d34c98a7ec94987f306,
+        type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 415788142}
     - target: {fileID: 5137253222520691502, guid: 96ac94f670030d34c98a7ec94987f306,
         type: 3}
       propertyPath: weaponMuzzle
@@ -531,12 +551,12 @@ PrefabInstance:
     - target: {fileID: 6680055051014213611, guid: 96ac94f670030d34c98a7ec94987f306,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6850061575982803532, guid: 96ac94f670030d34c98a7ec94987f306,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6858596646228109729, guid: 96ac94f670030d34c98a7ec94987f306,
         type: 3}
@@ -601,22 +621,22 @@ PrefabInstance:
     - target: {fileID: 8023175528543384750, guid: 96ac94f670030d34c98a7ec94987f306,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8137484346262682548, guid: 96ac94f670030d34c98a7ec94987f306,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8709143026682200515, guid: 96ac94f670030d34c98a7ec94987f306,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9021310074066776246, guid: 96ac94f670030d34c98a7ec94987f306,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -634,6 +654,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 415788133}
+    - targetCorrespondingSourceObject: {fileID: 7902601331077319620, guid: 96ac94f670030d34c98a7ec94987f306,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 415788142}
   m_SourcePrefab: {fileID: 100100000, guid: 96ac94f670030d34c98a7ec94987f306, type: 3}
 --- !u!1 &1579955021
 GameObject:

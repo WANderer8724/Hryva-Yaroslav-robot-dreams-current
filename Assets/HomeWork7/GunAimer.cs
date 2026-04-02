@@ -20,6 +20,8 @@ public class GunAimer : MonoBehaviour
 
     bool hit;
     public RaycastHit hitInfo;
+
+    [SerializeField] Gun gun;
     private void OnEnable()
     {
         Shoot.Enable();
@@ -43,14 +45,19 @@ public class GunAimer : MonoBehaviour
     void OnShoot(CallbackContext context)
     {
         Ray();
-        ShootAnimation();
+
+        Vector3 targetPoint = hit
+            ? hitInfo.point
+            : CameraTrnsform.position + CameraTrnsform.forward * 100f;
+
+        gun.Shoot(targetPoint);
+
         if (!hit) return;
 
         EnemyHP enemy = hitInfo.collider.GetComponent<EnemyHP>();
 
         if (enemy != null)
         {
-            enemy.takeDamage(damage);
             ScoreSystem();
         }
     }
