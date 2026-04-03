@@ -342,7 +342,8 @@ MonoBehaviour:
   muzzle: {fileID: 8276596344631526701}
   bulletPrefab: {fileID: 7193784429843569286, guid: 72af4e4ace2126d45a4d950695bdb64b,
     type: 3}
-  damage: 10
+  FleshPref: {fileID: 934607761161291951, guid: 833ab7df18f9f1d4e9a11d0ac262850d,
+    type: 3}
 --- !u!1001 &2185004796959020321
 PrefabInstance:
   m_ObjectHideFlags: 0
