@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class PlayerHP : MonoBehaviour
 {
     [SerializeField] float MaxHP;
     [SerializeField] float CurrentHP;
+
     private void Start()
     {
         CurrentHP = MaxHP;
@@ -20,4 +22,5 @@ public class PlayerHP : MonoBehaviour
     {
         Debug.Log("Game over");
     }
+
 }

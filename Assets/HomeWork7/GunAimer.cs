@@ -16,8 +16,6 @@ public class GunAimer : MonoBehaviour
 
     [SerializeField] float damage;
 
-    float score;
-
     bool hit;
     public RaycastHit hitInfo;
 
@@ -56,10 +54,6 @@ public class GunAimer : MonoBehaviour
 
         EnemyHP enemy = hitInfo.collider.GetComponent<EnemyHP>();
 
-        if (enemy != null)
-        {
-            ScoreSystem();
-        }
     }
     void WeaponLookToo()
     {
@@ -73,11 +67,7 @@ public class GunAimer : MonoBehaviour
             weapon.transform.LookAt(hitInfo.point);
         }
     }
-    void ScoreSystem()
-    {
-        score += 100;
-        Debug.Log("Your skore is:"+score);
-    }
+
     void ShootAnimation()
     {
         GameObject bullet = Instantiate(bulletPrefab, weaponMuzzle.transform.position, Quaternion.identity);

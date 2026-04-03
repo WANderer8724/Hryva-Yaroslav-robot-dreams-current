@@ -6,8 +6,11 @@ public class EnemyHP : MonoBehaviour
 {
     [SerializeField]float MaxHP;
     [SerializeField] float CurrentHP;
+
+    [SerializeField] Level level;
     private void Start()
     {
+        level = FindObjectOfType<Level>();
         CurrentHP = MaxHP;
     }
     public void takeDamage(float damage)
@@ -18,6 +21,7 @@ public class EnemyHP : MonoBehaviour
 
     void IsDeath()
     {
+        level.ScoreSystem();
         GetComponent<EnemyBehaviour>().isAlive = false;
     }
 }

@@ -14,7 +14,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/HomeWork9/HomeWork6.unity
     guid: f773dcb5feff3384a9c6c85c99a6e7e4
-  - enabled: 1
+  - enabled: 0
     path: Assets/HomeWork10/HomeWork10.unity
     guid: b972cf77994ebea41a08a77b7be47afc
+  - enabled: 1
+    path: Assets/HomeWork11/HW11.unity
+    guid: 54372c3c100b1ed4fb90137d145a132f
   m_configObjects: {}

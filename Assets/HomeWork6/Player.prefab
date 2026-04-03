@@ -419,7 +419,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7358147009397871041}
@@ -801,7 +801,8 @@ MonoBehaviour:
   muzzle: {fileID: 8287484047071461131}
   bulletPrefab: {fileID: 7193784429843569286, guid: 72af4e4ace2126d45a4d950695bdb64b,
     type: 3}
-  FleshPref: {fileID: 0}
+  FleshPref: {fileID: 934607761161291951, guid: 833ab7df18f9f1d4e9a11d0ac262850d,
+    type: 3}
 --- !u!1 &8044758894407771372
 GameObject:
   m_ObjectHideFlags: 0

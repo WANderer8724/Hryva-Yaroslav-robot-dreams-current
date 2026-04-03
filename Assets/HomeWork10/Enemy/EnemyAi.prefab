@@ -292,7 +292,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
-  visionRange: 15
+  visionRange: 30
   attackRange: 2
   isAlive: 1
 --- !u!114 &347852306485271608
@@ -307,8 +307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 306a98beae64deb4f9f652d39345a172, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolRadius: 20
-  moveSpeed: 3
+  patrolRadius: 50
+  moveSpeed: 5
   startPosition: {x: 0, y: 0, z: 0}
   currentTarget: {fileID: 0}
   lastSeenPosition: {x: 0, y: 0, z: 0}
