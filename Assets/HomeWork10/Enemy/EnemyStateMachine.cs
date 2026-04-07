@@ -1,8 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class EnemyStateMachine : MonoBehaviour
 {
-    public State currentState;
+    public Type currentStateType;
 
     [SerializeField] private float patrolRadius = 10f;
     [SerializeField] private float moveSpeed = 3f;
@@ -14,26 +16,48 @@ public class EnemyStateMachine : MonoBehaviour
 
     private Renderer rend;
 
+    private Dictionary<Type, State> states;
+
     public Gun gun;
 
     void Start()
     {
+        states = new();
+
+        states.Add(typeof(PatrolState), new PatrolState(this));
+        states.Add(typeof(SearchState), new SearchState(this));
+        states.Add(typeof(DistantAttackState), new DistantAttackState(this));
+        states.Add(typeof(MeleAttackState), new MeleAttackState(this));
+
+        currentStateType = typeof(PatrolState);
+
         startPosition = transform.position;
         rend = GetComponent<Renderer>();
-        SwitchState(new PatrolState(this));
 
+        SwitchState<PatrolState>();
+        SwitchState<DistantAttackState>();
     }
 
     void Update()
     {
-        currentState?.Update();
+
+        states[currentStateType].Update();
+
+
     }
 
-    public void SwitchState(State newState)
+    public void SwitchState<T>() where T : State
     {
-        currentState?.Exit();
-        currentState = newState;
-        currentState.Enter();
+        Type newstateType = typeof(T);
+
+        if (currentStateType == newstateType)
+            return;
+
+        states[currentStateType].Exit();
+
+        currentStateType = newstateType;
+
+        states[currentStateType].Enter();
     }
 
     // ================= BASE STATE =================
@@ -101,7 +125,7 @@ public class EnemyStateMachine : MonoBehaviour
         }
         private void SetNewPoint()
         {
-            Vector2 randomCircle = Random.insideUnitCircle * stateMachine.patrolRadius;
+            Vector2 randomCircle = UnityEngine.Random.insideUnitCircle * stateMachine.patrolRadius;
 
             targetPoint = new Vector3(
                 stateMachine.startPosition.x + randomCircle.x,
