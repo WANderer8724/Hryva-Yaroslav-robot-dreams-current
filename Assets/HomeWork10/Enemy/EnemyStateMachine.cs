@@ -20,6 +20,7 @@ public class EnemyStateMachine : MonoBehaviour
 
     public Gun gun;
 
+    [SerializeField] public Animator _animator;
     void Start()
     {
         states = new();
@@ -58,6 +59,8 @@ public class EnemyStateMachine : MonoBehaviour
         currentStateType = newstateType;
 
         states[currentStateType].Enter();
+        
+        StateAnimation(currentStateType);
     }
 
     // ================= BASE STATE =================
@@ -148,6 +151,7 @@ public class EnemyStateMachine : MonoBehaviour
         public override void Enter()
         {
             stateMachine.SetColor(Color.yellow);
+
             Debug.Log("Enter Chase");
         }
 
@@ -281,8 +285,41 @@ public class EnemyStateMachine : MonoBehaviour
                 );
             }
     }
-    public void SetColor(Color color)
+    [SerializeField] string _idleName;
+    [SerializeField] string _moveName;
+    [SerializeField] float _crossTime;
+    void StateAnimation(Type currentStateType)
     {
+        
+            if (_animator == null)
+            {
+                Debug.LogError($"Animator NULL у объекта: {gameObject.name}");
+                return;
+            }
+
+            Debug.Log($"Animation switch у: {gameObject.name}");
+
+            if (currentStateType == typeof(DistantAttackState))
+        {
+            _animator.CrossFadeInFixedTime(_idleName, _crossTime);
+        }
+        else if (currentStateType == typeof(MeleAttackState))
+        {
+            _animator.CrossFadeInFixedTime(_idleName, _crossTime);
+        }
+        else if (currentStateType == typeof(PatrolState))
+        {
+            _animator.CrossFadeInFixedTime(_moveName, _crossTime);
+        }
+        else if (currentStateType == typeof(SearchState))
+        {
+            _animator.CrossFadeInFixedTime(_moveName, _crossTime);
+        }
+    }
+
+
+    public void SetColor(Color color)
+{
         if (rend != null)
         {
             rend.material.color = color;
