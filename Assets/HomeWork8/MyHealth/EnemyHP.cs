@@ -8,8 +8,11 @@ public class EnemyHP : MonoBehaviour
     [SerializeField] float CurrentHP;
 
     [SerializeField] Level level;
+
+    [SerializeField] SpawnerEnemy SpawnerEnemy;
     private void Start()
     {
+        SpawnerEnemy = FindObjectOfType<SpawnerEnemy>();
         level = FindObjectOfType<Level>();
         CurrentHP = MaxHP;
     }
@@ -21,6 +24,7 @@ public class EnemyHP : MonoBehaviour
 
     void IsDeath()
     {
+        SpawnerEnemy.EnemyDead();
         level.ScoreSystem();
         GetComponent<EnemyBehaviour>().isAlive = false;
     }

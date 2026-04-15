@@ -2,9 +2,14 @@ using UnityEngine;
 
 public class PickupItem : MonoBehaviour
 {
-    [SerializeField] private string itemName;
-    [SerializeField] private int amount ;
+    public string itemName;
+    public int count;
 
+    public PickupItem(string name, int amount)
+    {
+        name = itemName;
+        amount = count;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other == PlayerController.Instance.Collider)
@@ -13,7 +18,7 @@ public class PickupItem : MonoBehaviour
 
             if (inventory != null)
             {
-                inventory.AddItem(itemName, amount);
+                inventory.AddItem(itemName, count);
                 Destroy(gameObject);
             }
         }
