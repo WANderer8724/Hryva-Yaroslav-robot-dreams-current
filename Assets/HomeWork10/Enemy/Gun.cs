@@ -6,9 +6,11 @@ public class Gun : MonoBehaviour
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] GameObject FleshPref;
 
-
+    [SerializeField] private ParticleSystem muzzleFlash;
     public void Shoot(Vector3 targetPoint)
     {
+
+        muzzleFlash.Play();
         IndicationEffect();
         GameObject bullet = Instantiate(bulletPrefab, muzzle.position, Quaternion.identity);
 

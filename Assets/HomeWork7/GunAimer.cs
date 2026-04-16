@@ -20,6 +20,8 @@ public class GunAimer : MonoBehaviour
     public RaycastHit hitInfo;
 
     [SerializeField] Gun gun;
+
+
     private void OnEnable()
     {
         Shoot.Enable();
@@ -70,6 +72,7 @@ public class GunAimer : MonoBehaviour
 
     void ShootAnimation()
     {
+
         GameObject bullet = Instantiate(bulletPrefab, weaponMuzzle.transform.position, Quaternion.identity);
 
         Vector3 targetPoint;
@@ -82,6 +85,8 @@ public class GunAimer : MonoBehaviour
         Vector3 direction = (targetPoint - weaponMuzzle.transform.position).normalized;
 
         bullet.GetComponent<Bullet>().SetDirection(direction);
+
+
     }
 
     void Ray()
