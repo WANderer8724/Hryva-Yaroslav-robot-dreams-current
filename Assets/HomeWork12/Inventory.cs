@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class Inventory : MonoBehaviour
     [SerializeField] int gold;
 
     [SerializeField] private InventoryUI inventoryUI;
+
+    [SerializeField] Text goldText;
     public int Gold => gold;
     public List<InventoryItem> GetItems()
     {
@@ -38,6 +41,7 @@ public class Inventory : MonoBehaviour
     public void AddGold(int gold)
     {
         this.gold += gold;
+        goldText.text = "Gold: "+ this.gold;
     }
     private void SyncToList()
     {

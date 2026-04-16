@@ -540,6 +540,7 @@ MonoBehaviour:
   itemsList: []
   gold: 0
   inventoryUI: {fileID: 550755242}
+  goldText: {fileID: 360874725}
 --- !u!143 &478144032 stripped
 CharacterController:
   m_CorrespondingSourceObject: {fileID: 321896143705148215, guid: 96ac94f670030d34c98a7ec94987f306,
@@ -2605,8 +2606,38 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4829387604713145114, guid: 96ac94f670030d34c98a7ec94987f306,
         type: 3}
+      propertyPath: layout
+      value: 
+      objectReference: {fileID: 550755238}
+    - target: {fileID: 4829387604713145114, guid: 96ac94f670030d34c98a7ec94987f306,
+        type: 3}
+      propertyPath: Inventory.m_Name
+      value: Inventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829387604713145114, guid: 96ac94f670030d34c98a7ec94987f306,
+        type: 3}
+      propertyPath: Inventory.m_SingletonActionBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829387604713145114, guid: 96ac94f670030d34c98a7ec94987f306,
+        type: 3}
       propertyPath: action.m_SingletonActionBindings.Array.data[0].m_Path
       value: <Keyboard>/escape
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829387604713145114, guid: 96ac94f670030d34c98a7ec94987f306,
+        type: 3}
+      propertyPath: Inventory.m_SingletonActionBindings.Array.data[0].m_Id
+      value: a665f152-69f9-455f-8a2a-3de80aa87feb
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829387604713145114, guid: 96ac94f670030d34c98a7ec94987f306,
+        type: 3}
+      propertyPath: Inventory.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Keyboard>/e
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829387604713145114, guid: 96ac94f670030d34c98a7ec94987f306,
+        type: 3}
+      propertyPath: Inventory.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Inventory
       objectReference: {fileID: 0}
     - target: {fileID: 6858596646228109729, guid: 96ac94f670030d34c98a7ec94987f306,
         type: 3}
