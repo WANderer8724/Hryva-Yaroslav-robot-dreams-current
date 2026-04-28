@@ -6,6 +6,8 @@ using UnityEngine.SocialPlatforms.Impl;
 public class Level : MonoBehaviour
 {
     float score;
+    [SerializeField] LoseWinCode LoseWin;
+    [SerializeField] GameObject LoseWinPanel;
     public void ScoreSystem()
     {
         score += 100;
@@ -15,9 +17,13 @@ public class Level : MonoBehaviour
 
     public void Win()
     {
-        if (score >= 2000)
+        if (score >= 200)
         {
-            Debug.Log("You Win!!");
+            Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+            LoseWin.Win("Win");
+            LoseWinPanel.SetActive(true);
         }
     }
 }
