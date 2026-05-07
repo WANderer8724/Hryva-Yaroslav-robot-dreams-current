@@ -20,6 +20,7 @@ public class GunAimer : MonoBehaviour
     public RaycastHit hitInfo;
 
     [SerializeField] Gun gun;
+    [SerializeField] ShootSound ShootSound;
 
 
     private void OnEnable()
@@ -45,7 +46,7 @@ public class GunAimer : MonoBehaviour
     void OnShoot(CallbackContext context)
     {
         Ray();
-
+        ShootSound.ShootHandler();
         Vector3 targetPoint = hit
             ? hitInfo.point
             : CameraTrnsform.position + CameraTrnsform.forward * 100f;
